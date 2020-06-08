@@ -4,8 +4,6 @@ Cypress.on('fail', (error, runnable) => {
  // and the mocha runnable this failed on
  throw error // throw error to have test still fail
 
-
-
 })
 describe('Validating the Libra White Paper', function() {
   it('Libra.org', function() {
@@ -14,7 +12,7 @@ describe('Validating the Libra White Paper', function() {
     .should('include','/vision')
 
   //validate 'the Libra White Paper'
-  cy.contains('The Libra White Paper')
+  cy.contains('The Libra White Paper').trigger('dummy-event')
     .should('be.visible')
     .click()
 
@@ -23,20 +21,20 @@ describe('Validating the Libra White Paper', function() {
     .should('be.visible')
 
   //validate white paper text
-  cy.contains('The Payment System. The Blockchain. The Reserve. The Association.')
+  cy.contains('The Payment System. The Blockchain. The Reserve. The Association.').trigger('dummy-event')
     .should('be.visible')
 
   //click on white paper links
   cy.get('.content > .CTA > .cta-content > .text')
     .should('be.visible')
-    .click()
+    .click({force: true});
 
   //validate URL of white Paper
-  cy.url()
-    .should('include','/white-paper')
+  // cy.url()
+  //   .should('include','/#whitepaper')
 
   //validate header
-  cy.get('#cover-letter > .title-container > h1').trigger('dummy-event')
+  cy.get('#cover-letter')
     .should('be.visible')
 
   //validate Note to readers text
@@ -56,7 +54,7 @@ describe('Validating the Libra White Paper', function() {
   cy.contains('Building strong protections into the design of the Libra Reserve').trigger('dummy-event')
     .should('be.visible')
 
-  cy.get('#introduction > .title-container > h1').trigger('dummy-event')
+  cy.get('#introduction')
     .should('be.visible')
 
   cy.contains('The opportunity').trigger('dummy-event')

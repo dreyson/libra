@@ -4,8 +4,6 @@ Cypress.on('fail', (error, runnable) => {
  // and the mocha runnable this failed on
  throw error // throw error to have test still fail
 
-
-
 })
 describe('Validate the Vision header 1', function() {
  it('Libra.org', function() {

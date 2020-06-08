@@ -9,7 +9,7 @@ describe('Run through all pages on Libra Homepage', function() {
    cy.visit('https://libra.org/en-US/')
 
 // Validate Logo
-  cy.get('[aria-hidden="true"] > .topNavWrapper > .logo-container > .Logo')
+  cy.get('[aria-hidden="true"] > .topNavWrapper > .logo-container > .Logo').trigger('dummy-event')
   .should('be.visible')
 
 // Validate Header Links
