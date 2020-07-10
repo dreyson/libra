@@ -29,10 +29,10 @@ describe('Validating the Libra White Paper', function() {
     .should('be.visible')
     .click({force: true});
 
-  //validate URL of white Paper
-  // cy.url()
-  //   .should('include','/#whitepaper')
+  })
 
+
+  it('cover_letter', function() {
   //validate header
   cy.get('#cover-letter')
     .should('be.visible')
@@ -53,16 +53,30 @@ describe('Validating the Libra White Paper', function() {
 
   cy.contains('Building strong protections into the design of the Libra Reserve').trigger('dummy-event')
     .should('be.visible')
+    })
 
+//validate introduction
+  it('introduction', function() {
   cy.get('#introduction')
     .should('be.visible')
 
   cy.contains('The opportunity').trigger('dummy-event')
     .should('be.visible')
+//add
 
+  })
+
+
+  //validate the libra payment system
+  it('payment_system', function() {
   cy.get('#the-libra-payment-system > .title-container > h1').trigger('dummy-event')
     .should('be.visible')
+//add
+  })
 
+
+  //Validate libra Blockchain
+  it('libra_blockchain', function() {
   cy.get('#the-libra-blockchain > .title-container > h1').trigger('dummy-event')
     .should('be.visible')
 
@@ -74,7 +88,12 @@ describe('Validating the Libra White Paper', function() {
 
   cy.contains('Adopting and iterating on widely adopted blockchain data structures').trigger('dummy-event')
     .should('be.visible')
+//add
 
+  })
+
+  //validate economic and the libra reserve
+  it('economicand_libra_reserve', function() {
   cy.get('#the-economic-and-the-libra-reserve > .title-container > h1').trigger('dummy-event')
     .should('be.visible')
 
@@ -89,7 +108,11 @@ describe('Validating the Libra White Paper', function() {
 
   cy.contains('Emergency operations').trigger('dummy-event')
     .should('be.visible')
+//add
+  })
 
+  //validate compliance-and-the-prevention-of-illicit-activity
+  it('compliance_and_the_prevention_of_illicit-activity', function() {
   cy.get('#compliance-and-the-prevention-of-illicit-activity > .title-container > h1').trigger('dummy-event')
     .should('be.visible')
 
@@ -99,24 +122,51 @@ describe('Validating the Libra White Paper', function() {
   cy.contains('Details of compliance and safety controls across the Libra network').trigger('dummy-event')
     .should('be.visible')
 
+//add A LOT
+})
+
+  //validate open and competitive
+  it('open_competitive', function() {
   cy.get('#an-open-and-competitive-network > .title-container > h1').trigger('dummy-event')
     .should('be.visible')
 
   cy.contains('Exploring an Open, Transparent, and Competitive Market for Network Services and Governance').trigger('dummy-event')
     .should('be.visible')
 
+//add
+
+  })
+    //validate libra_association
+  it('libra_association', function() {
   cy.get('#the-libra-association > .title-container').trigger('dummy-event')
     .should('be.visible')
 
   cy.contains('How to get involved').trigger('dummy-event')
     .should('be.visible')
+  //add
+  })
 
+
+
+  //validate whats next
+  it('whats_next', function() {
   cy.get('#whats-next > .title-container > h1').trigger('dummy-event')
     .should('be.visible')
 
+    //add
+  })
+
+  //validate conclusion
+  it('conclusion', function() {
   cy.get('#conclusion > .title-container').trigger('dummy-event')
     .should('be.visible')
 
+//add
+
+})
+
+  it('Libra_lexicon', function() {
+  // Validate Libra Lexicon links
   cy.contains('Libra Lexicon').trigger('dummy-event')
     .should('be.visible')
 

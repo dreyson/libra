@@ -254,14 +254,4 @@ describe('Validating the Libra Assiciation Page Member Responsibility', function
   cy.contains('The Association is governed by the Libra Association Council, which is comprised of one representative per Association Member.')
     .should('be.visible')
   })
-
-//
-//   //validate 'the Libra White Paper'
-//   // cy.contains('The Libra White Paper').trigger('dummy-event')
-//   //   .should('be.visible')
-//   //   .click()
-//
-//
-
-
 })
