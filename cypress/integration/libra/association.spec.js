@@ -6,7 +6,7 @@ Cypress.on('fail', (error, runnable) => {
 
     })
 describe('Validating the Libra Assiciation Page Member Responsibility', function() {
-  it('membership', function() {
+  it('Membership', function() {
   cy.visit('https://libra.org/en-US/association/')
   cy.url()
     .should('include','association')
@@ -24,7 +24,7 @@ describe('Validating the Libra Assiciation Page Member Responsibility', function
     })
 
   //validate governance
-  it('governance', function() {
+  it('Governance', function() {
   cy.get('.container > .Grid > .grid-container > :nth-child(1) > .IconGridItem > .icon-container > .icon')
     .should('be.visible')
   cy.contains('Governance')
@@ -36,7 +36,7 @@ describe('Validating the Libra Assiciation Page Member Responsibility', function
     })
 
   // validate implementation
-  it('implementation', function() {
+  it('Implementation', function() {
   cy.get('.container > .Grid > .grid-container > :nth-child(2) > .IconGridItem > .icon-container > .icon')
     .should('be.visible')
   cy.contains('Implementation')
@@ -58,7 +58,7 @@ describe('Validating the Libra Assiciation Page Member Responsibility', function
     })
 
     //Validate the executive team
-  it('executive_team', function() {
+  it('Executive_Team', function() {
   cy.contains('The Executive Team')
     .should('be.visible')
     .click()
@@ -122,7 +122,7 @@ describe('Validating the Libra Assiciation Page Member Responsibility', function
     })
 
     //Validate The Board of Directors
-  it('board_of_directors', function() {
+  it('Board_of_Directors', function() {
   cy.contains('The Board of Directors')
     .should('be.visible')
     .click()
@@ -200,7 +200,7 @@ describe('Validating the Libra Assiciation Page Member Responsibility', function
 
 
     //Validate The Technical Steering Committee
-  it('technical_steering_committee', function() {
+  it('Technical_Steering_Committee', function() {
   cy.contains('The Technical Steering Committee')
     .should('be.visible')
     .click()
@@ -213,7 +213,7 @@ describe('Validating the Libra Assiciation Page Member Responsibility', function
     })
 
 //Validate The Members
-  it('members', function() {
+  it('Members', function() {
   cy.contains('The Members')
     .should('be.visible')
     .click()
@@ -223,7 +223,7 @@ describe('Validating the Libra Assiciation Page Member Responsibility', function
     })
 
   // George Cabrera III
-  it('George Cabrera III', function() {
+  it('George_Cabrera_III', function() {
   cy.get('#technical_steering_committee > .container > .Grid > .grid-container > :nth-child(1) > .TeamGridItem > .photo-container > .photo')
     .should('be.visible')
   cy.contains('Libra Core Product Lead of Novi')
@@ -234,14 +234,14 @@ describe('Validating the Libra Assiciation Page Member Responsibility', function
     })
 
   // Nick Grossman
-  it('Nick Grossman', function() {
+  it('Nick_Grossman', function() {
   cy.get('#technical_steering_committee > .container > .Grid > .grid-container > :nth-child(2) > .TeamGridItem > .photo-container > .photo')
     .should('be.visible')
 
     })
 
   // Joe Lallouz
-  it('Joe Lallouz', function() {
+  it('Joe_Lallouz', function() {
   cy.get('#technical_steering_committee > .container > .Grid > .grid-container > :nth-child(3) > .TeamGridItem > .photo-container > .photo')
     .should('be.visible')
 
@@ -249,14 +249,14 @@ describe('Validating the Libra Assiciation Page Member Responsibility', function
 
 
   // Diogo Monica
-  it('Diogo Monica', function() {
+  it('Diogo_Monica', function() {
   cy.get('#technical_steering_committee > .container > .Grid > .grid-container > :nth-child(4) > .TeamGridItem > .photo-container > .photo')
     .should('be.visible')
 
     })
 
   //Ric Shreves
-  it('Ric Shreves', function() {
+  it('Ric_Shreves', function() {
   cy.get('#technical_steering_committee > .container > .Grid > .grid-container > :nth-child(5) > .TeamGridItem > .photo-container > .photo')
     .should('be.visible')
 
@@ -264,7 +264,7 @@ describe('Validating the Libra Assiciation Page Member Responsibility', function
 
 
     //validate page header
-  it('libra_association', function() {
+  it('Libra_Association', function() {
   cy.contains('The Libra Association')
     .should('be.visible')
   cy.contains('The Libra Association is an independent membership organization, headquartered in Geneva, Switzerland.')
@@ -273,7 +273,7 @@ describe('Validating the Libra Assiciation Page Member Responsibility', function
     })
 
   //validate Open Source, Scalable, Secure Using Scroll
-  it('open_scale_scroll', function() {
+  it('Open_Scale_Scroll', function() {
   //icon
   cy.get('.wrapper > .Grid > .grid-container > :nth-child(1) > .IconGridItem > .icon-container > .icon')
     .should('be.visible')
@@ -315,7 +315,7 @@ describe('Validating the Libra Assiciation Page Member Responsibility', function
 
   // validate role
   //Icon
-  it('role', function() {
+  it('Role', function() {
   cy.get('.zig-zag-items-container > :nth-child(1) > .icon')
     .should('be.visible')
   //text
@@ -327,7 +327,7 @@ describe('Validating the Libra Assiciation Page Member Responsibility', function
     })
 
   //validate organization
-  it('organization', function() {
+  it('Organization', function() {
   //Icon
   cy.get(':nth-child(2) > .icon')
     .should('be.visible')

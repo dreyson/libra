@@ -93,6 +93,7 @@ describe('Validate the Vision, Coins, Reserve, Blockchain', function() {
   cy.contains('Libra Coins are fully backed by a reserve of assets made up of cash or ca​sh eq​uivalents and very short-term government secu​rities. This ensures people and businesses have confidence that their Libra Coins can be converted into their local currency when they need it to be.')
     .should('be.visible')
 
+
   })
 
 //these tests are flaking
